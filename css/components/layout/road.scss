@@ -1,0 +1,60 @@
+.road {
+  &__inner {
+    &-header {
+      display: flex;
+      align-content: center;
+      &-btn {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+        padding: 10px 20px;
+        background: $black-1;
+        border-radius: 20px 20px 0 0;
+        cursor: pointer;
+        @include transition;
+        br {
+          display: none;
+        }
+        span {
+          color: $gray;
+          background: -webkit-linear-gradient(45deg, #8a8a8a, #ffffff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include transition;
+        }
+        &.active {
+          background: $black-2;
+          span {
+            color: $gold;
+            background: -webkit-linear-gradient(45deg, #cb9100, #ffc700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+    &-body {
+      min-height: 400px;
+      padding: 50px;
+      background: $black-2;
+      border-radius: 0 25px 25px 25px;
+      &-content {
+        display: none;
+        position: relative;
+        animation: tab1 0.2s linear;
+        -webkit-animation: tab1 0.2s linear;
+        &.active {
+          display: block;
+        }
+        &-row {
+          display: flex;
+          &-column {
+            width: calc(33.3% - 15px);
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}

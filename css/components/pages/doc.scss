@@ -1,0 +1,381 @@
+.doc {
+  padding: 40px 0;
+  &__inner {
+    &-header {
+      display: flex;
+      align-items: center;
+      &-link {
+        padding: 10px 25px;
+        background: linear-gradient(67.32deg, #9b9b9b 0%, #ffffff 100%);
+        border-radius: 35px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: $black;
+        margin-right: 20px;
+        &.active {
+          background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+        }
+      }
+    }
+    &-content {
+      position: relative;
+      padding-top: 50px;
+      min-height: 400px;
+      &-row {
+        display: flex;
+      }
+      &-tab {
+        width: 50%;
+        &-event {
+          display: none;
+          animation: tab1 0.2s linear;
+          position: relative;
+          &-image {
+            max-width: 320px;
+            margin: 0 auto;
+            img {
+              width: 100%;
+            }
+          }
+          &-language {
+            background: linear-gradient(67.32deg, #4f4f4f 0%, #868686 100%);
+            border-radius: 35px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            color: $gray-2;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 270px;
+            margin: 0 auto;
+          }
+          &.active {
+            display: block;
+          }
+        }
+      }
+      &-nav {
+        width: 50%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        justify-content: center;
+        &-link {
+          background: linear-gradient(67.32deg, #4f4f4f 0%, #868686 100%);
+          border-radius: 35px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+          color: $gray-2;
+          padding: 10px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 270px;
+          width: 100%;
+          margin: 10px 0;
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+          }
+        }
+      }
+      &-card {
+        margin-right: 50px;
+        &-row {
+          display: flex;
+        }
+        &-body {
+          padding: 20px 15px;
+          background: rgba(64, 64, 64, 0.5);
+          border-radius: 20px;
+          max-width: 210px;
+          &-image {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &-info {
+            margin-top: 40px;
+            &-title {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 29px;
+              text-align: center;
+              color: $white;
+              span {
+                display: block;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+        &-footer {
+          background: linear-gradient(67.32deg, #171717 0%, #747474 100%);
+          border-radius: 35px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+          color: #ffffff;
+          margin: 0 auto;
+          max-width: 180px;
+          padding: 10px 0;
+          display: block;
+          margin-top: 20px;
+        }
+      }
+      &-meme {
+        padding-top: 50px;
+      }
+      &-blog {
+        display: flex;
+        margin-top: 50px;
+        &-post {
+          width: calc(100% - 280px);
+          border-radius: 25px;
+          position: relative;
+          background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+          &::before {
+            position: absolute;
+            content: "";
+            top: 4px;
+            left: 4px;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            border-radius: 25px;
+            background: $black-1;
+          }
+          &-image {
+            padding: 4px;
+            width: calc(100% - 8px);
+            height: 372px;
+            position: relative;
+            img {
+              @include fullImage;
+              border-radius: 25px;
+            }
+          }
+          &-body {
+            position: absolute;
+            bottom: 4px;
+            border-radius: 25px;
+            padding: 20px;
+            width: calc(100% - 48px);
+            left: 4px;
+            background: $black;
+            &-title {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 29px;
+              color: $gold;
+              text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+              background: -webkit-linear-gradient(45deg, #cb9100, #ffc700);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            &-para {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+              color: $gray-2;
+            }
+          }
+        }
+        &-info {
+          width: 240px;
+          margin: -15px 0 -15px 30px;
+          display: flex;
+          flex-direction: column;
+          -ms-flex-direction: column;
+          &-number {
+            height: calc(50% - 70px);
+            width: calc(100% - 40px);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 25px;
+            position: relative;
+            background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+            &::before {
+              position: absolute;
+              content: "";
+              top: 4px;
+              left: 4px;
+              width: calc(100% - 8px);
+              height: calc(100% - 8px);
+              border-radius: 25px;
+              background: $black;
+            }
+            &-text {
+              position: relative;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 29px;
+              text-align: center;
+              color: $gray-2;
+              text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+              background: -webkit-linear-gradient(45deg, #bcbcbc, #dedede);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 64px;
+                line-height: 78px;
+                display: block;
+                margin-top: 20px;
+                text-align: center;
+                text-shadow: 2.9149px 2.9149px 7.28724px rgba(0, 0, 0, 0.25);
+                background: -webkit-linear-gradient(80deg, #bcbcbc, #dedede);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+          }
+        }
+      }
+    }
+    .subtitle {
+      margin-top: 60px;
+      &.left {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 0;
+        h2 {
+          font-size: 36px;
+          line-height: 42px;
+          background: -webkit-linear-gradient(45deg, #6a6a6a, #fff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 2.9149px 2.9149px 7.28724px rgba(0, 0, 0, 0.25);
+        }
+      }
+      h2 {
+        background: -webkit-linear-gradient(45deg, #6a6a6a, #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2.9149px 2.9149px 7.28724px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+  .title {
+    &.centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        text-align: center;
+      }
+    }
+    &.left {
+      align-items: flex-start;
+      justify-content: flex-start;
+      h2 {
+        font-weight: 700;
+      }
+    }
+  }
+  .upload {
+    margin: 80px auto;
+    position: relative;
+    &__input {
+      position: relative;
+      max-width: 270px;
+      margin: 0 auto;
+      &-tooltip {
+        position: absolute;
+        left: calc(100% + 15px);
+        top: 50%;
+        @include transformY;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: $gray-2;
+        padding: 20px;
+        background: $black-1;
+        border-radius: 20px;
+        width: 260px;
+        opacity: 0;
+        @include transition;
+        &::after {
+          content: " ";
+          position: absolute;
+          top: 50%;
+          right: 100%; /* To the right of the tooltip */
+          @include transformY;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent $black-1 transparent transparent;
+        }
+      }
+      &:hover {
+        .upload__input-tooltip {
+          opacity: 1;
+        }
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+      }
+      label {
+        display: block;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 100%;
+        text-align: center;
+        color: $gray-2;
+        padding: 14px 32px;
+        background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+        border-radius: 15px;
+      }
+      &-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: $gray-2;
+        margin-top: 10px;
+      }
+    }
+  }
+}

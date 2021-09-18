@@ -1,0 +1,46 @@
+.dropdown {
+  position: relative;
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $black;
+    padding: 10px;
+    cursor: pointer;
+  }
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    background: $gray-2;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    @include transformX;
+    @include transition;
+    opacity: 0;
+    box-shadow: 0px 2px 4px rgba($color: $black, $alpha: 0.1);
+    &-link {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $black;
+      padding: 10px;
+      text-align: center;
+      width: 220px;
+      display: block;
+      @include transition;
+      &:hover {
+        background: #f7f7f7;
+      }
+    }
+  }
+  &:hover {
+    .dropdown__content {
+      max-height: 400px;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.footer {
+  padding: 50px 0;
+  position: relative;
+  background: $gray-2;
+  .particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__inner {
+    &-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+      color: $gold;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      span {
+        background: -webkit-linear-gradient(35deg, #cb9100, #ffc700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 20px;
+      }
+    }
+    &-row {
+      display: flex;
+      margin: 40px 0;
+      &-column {
+        width: 33.3%;
+        &-title {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+          color: $black;
+          margin-bottom: 20px;
+        }
+        &-link {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          color: $black;
+          display: block;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-link {
+        width: 40px;
+        margin: 0 10px;
+        svg {
+          max-width: 30px;
+          max-height: 30px;
+          fill: $black-1;
+        }
+      }
+    }
+    &-copy {
+      margin-top: 30px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      color: $black-1;
+    }
+  }
+  &.gray {
+    background: $footer-gray;
+    .footer {
+      &__inner {
+        &-row {
+          &-column {
+            &-title {
+              color: $footer-gray-color;
+            }
+            &-link {
+              color: $footer-gray-color;
+            }
+          }
+        }
+        &-social {
+          &-link {
+            svg {
+              fill: $footer-gray-color;
+            }
+          }
+        }
+        &-copy {
+          color: $footer-gray-color;
+        }
+      }
+    }
+  }
+  &.dark {
+    background: $black;
+    .footer {
+      &__inner {
+        &-row {
+          &-column {
+            &-title {
+              color: $footer-gray-color;
+            }
+            &-link {
+              color: $footer-gray-color;
+            }
+          }
+        }
+        &-social {
+          &-link {
+            svg {
+              fill: $footer-gray-color;
+            }
+          }
+        }
+        &-copy {
+          color: $footer-gray-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.wealth {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    img {
+      @include fullImage;
+    }
+  }
+  &__inner {
+    width: 50%;
+    padding-top: 270px;
+  }
+  &__frame {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    h1 {
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 1;
+    }
+  }
+  .para {
+    p {
+      font-size: 18px;
+      color: $gray-2;
+    }
+  }
+}

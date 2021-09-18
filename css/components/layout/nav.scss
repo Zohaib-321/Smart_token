@@ -1,0 +1,27 @@
+.nav {
+  &__inner {
+    display: flex;
+    align-items: center;
+    &-link {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $black;
+      padding: 10px;
+      position: relative;
+    }
+    &-btn {
+      background: linear-gradient(67.32deg, #936900 0%, #e8b500 100%);
+      border-radius: 35px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      margin-left: 50px;
+      display: inline-block;
+      padding: 8px 30px;
+    }
+  }
+}

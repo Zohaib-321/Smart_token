@@ -1,0 +1,168 @@
+.hero {
+  background: $black;
+  padding-top: 110px;
+  &__inner {
+    display: flex;
+    &-content {
+      width: calc(45% - 100px);
+      padding-left: 100px;
+    }
+    &-image {
+      width: calc(55% + 60px);
+      margin-right: -60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .title {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .para {
+    p {
+      color: $gray-2;
+    }
+  }
+}
+.academy {
+  background: $gray-2;
+  padding: 140px 0;
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: $black;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-content {
+      width: 42%;
+      max-width: 330px;
+    }
+    &-slider {
+      &-item {
+        background: $black;
+        border: 5px solid $black-2;
+        box-shadow: 0px 0px 45.5172px rgba(229, 229, 229, 0.25);
+        border-radius: 25px;
+        display: flex !important;
+        position: relative;
+        &-content {
+          padding: 40px 30px;
+          width: calc(100% - 305px);
+          &-title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 100%;
+            color: $gold;
+            background: -webkit-linear-gradient(45deg, #cb9100, #ffc700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+          }
+          &-para {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: $white;
+          }
+        }
+        &-image {
+          width: 245px;
+          height: 400px;
+          border-radius: 20px;
+          overflow: hidden;
+          img {
+            @include fullImage;
+          }
+        }
+      }
+      &-outer {
+        width: 58%;
+        position: relative;
+        .prevA {
+          position: absolute;
+          top: 50%;
+          @include transformY;
+          left: -60px;
+          cursor: pointer;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 25px;
+            height: 45px;
+          }
+        }
+        .nextA {
+          position: absolute;
+          top: 50%;
+          @include transformY;
+          right: -60px;
+          width: 50px;
+          cursor: pointer;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 25px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+  .title {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    h2 {
+      font-weight: 700;
+    }
+  }
+  .para {
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+.available {
+  position: relative;
+  width: 100%;
+  position: relative;
+  bottom: -20px;
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(180deg, #eeeeee 0%, #171717 100%);
+  }
+  img {
+    width: 100%;
+  }
+  .title {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    @include transformX;
+  }
+}
